@@ -66,9 +66,9 @@ module_exit(simple_cleanup);
 sudo apt update && sudo apt upgrade && sudo apt autoremove
 reboot
 
-sudo apt install build-essential chec kinstall make cmake git
+sudo apt install build-essential checkinstall make cmake git
 
-# Install Kernel source code snd headers
+# Install Kernel source code and headers
 # https://askubuntu.com/questions/159833/how-do-i-get-the-kernel-source-code
 sudo apt install linux-source
 
@@ -77,6 +77,8 @@ uname -r
 # /lib/modules/5.4.0-150-generic
 # /usr/src/linux-headers-5.4.0-150-generic
 # /usr/src/linux-source-5.4.0-150
+ls /lib/modules/`uname -r`
+ls /usr/src/linux-headers-`uname -r`
 
 # https://devarea.com/linux-kernel-development-and-writing-a-simple-kernel-module
 make
